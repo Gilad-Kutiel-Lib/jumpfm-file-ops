@@ -1,0 +1,1 @@
+A JumpFm core plugin that enable basic file operations.
