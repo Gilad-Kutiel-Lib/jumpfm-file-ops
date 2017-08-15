@@ -8,8 +8,8 @@ import * as path from 'path';
 
 export const load = (jumpFm: JumpFm) => {
     const dialog = jumpFm.dialog
-    const clipboard = jumpFm.clipboard
-    const opn = jumpFm.opn
+    const clipboard = jumpFm.electron.clipboard
+    const shell = jumpFm.electron.shell
     const bind = jumpFm.bindKeys
     const activePanel = jumpFm.getActivePanel
     const passivePanel = jumpFm.getPassivePanel
@@ -35,7 +35,7 @@ export const load = (jumpFm: JumpFm) => {
             onAccept: name => {
                 const f = path.join(pwd, name)
                 fs.closeSync(fs.openSync(f, 'a'))
-                opn(f);
+                shell.openItem(f);
             }
         })
     }
