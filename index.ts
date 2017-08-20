@@ -28,7 +28,7 @@ export const load = (jumpFm: JumpFm) => {
         const pwd = activePanel().getPath()
         jumpFm.dialog.open({
             label: "New File",
-            onDialogOpen: input => {
+            onOpen: input => {
                 input.value = "untitled.txt"
                 input.select();
             },
@@ -43,7 +43,8 @@ export const load = (jumpFm: JumpFm) => {
     const rename = () => {
         dialog.open({
             label: 'Rename',
-            onDialogOpen: input => {
+            onOpen: input => {
+                console.log('open', input)
                 const name = activePanel().getCurItem().name
                 input.value = name
                 input.select()
@@ -62,7 +63,7 @@ export const load = (jumpFm: JumpFm) => {
     const newFolder = () => {
         dialog.open({
             label: 'New Folder',
-            onDialogOpen: input => {
+            onOpen: input => {
                 input.value = 'New Folder'
                 input.select()
             },
