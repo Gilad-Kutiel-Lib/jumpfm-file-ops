@@ -1,1 +1,1 @@
-A JumpFm core plugin that enable basic file operations.
+A [JumpFm](http://jumpfm.org/) core plugin that enable basic file operations.
