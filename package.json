@@ -1,7 +1,7 @@
 {
   "name": "jumpfm-file-ops",
   "version": "1.1.0",
-  "description": "",
+  "description": "A [JumpFm](http://jumpfm.org/) core plugin that enable basic file operations.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -16,5 +16,14 @@
   "devDependencies": {
     "@types/fs-extra": "^4.0.0",
     "@types/node": "^8.0.24"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JumpFm/jumpfm-file-ops.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/JumpFm/jumpfm-file-ops/issues"
+  },
+  "homepage": "https://github.com/JumpFm/jumpfm-file-ops#readme"
 }
