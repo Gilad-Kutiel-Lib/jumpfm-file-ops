@@ -20,11 +20,11 @@ export const load = (jumpFm: JumpFm) => {
         })
 
         panel.bind('edit', ['f4'], () => {
-            cmd.run(
-                jumpFm.settings.getStr('editor', 'gedit')
-                + " "
-                + panel.getCurrentItem().path
-            )
+            const cmdStr =
+                `${jumpFm.settings.getStr('editor', 'gedit')} "${panel.getCurrentItem().path}"`
+
+            console.log(cmdStr)
+            cmd.run(cmdStr)
         })
 
         panel.bind('newFile', ['shift+f4'], () => {
