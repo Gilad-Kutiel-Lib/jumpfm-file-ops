@@ -1,5 +1,6 @@
 import { JumpFm } from 'jumpfm-api'
 
+import * as mv from 'mv';
 import * as fs from 'fs-extra';
 import * as cmd from 'node-cmd';
 import * as path from 'path';
@@ -79,9 +80,10 @@ export const load = (jumpFm: JumpFm) => {
 
         panel.bind('move', ['f6'], () => {
             panel.getSelectedItems().forEach(file =>
-                fs.move(
-                    file.path,
-                    path.join(jumpFm.getPanelPassive().getUrl().path, file.name)
+                mv(
+                    file.path
+                    , path.join(jumpFm.getPanelPassive().getUrl().path, file.name)
+                    , err => console.log(err)
                 )
             )
         })
