@@ -39,7 +39,7 @@ export const load = (jumpFm: JumpFm) => {
                 onAccept: name => {
                     const f = path.join(pwd, name)
                     fs.closeSync(fs.openSync(f, 'a'))
-                    shell.openItem(f);
+                    shell.openItem(f)
                 }
             })
         })
